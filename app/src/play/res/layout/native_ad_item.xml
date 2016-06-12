@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="data"
+            type="com.adxmi.customizedad.ContentAdModel" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        style="?cardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/spacing_micro"
+        android:foreground="?selectableItemBackground"
+        app:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:id="@+id/shot_item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/keyline_1">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/user_image"
+                android:layout_width="@dimen/avatar_bounds"
+                android:layout_height="@dimen/avatar_bounds"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="@dimen/spacing_micro"
+                android:layout_marginLeft="@dimen/spacing_micro"
+                android:layout_marginTop="@dimen/spacing_micro"
+                android:clickable="true"
+                android:focusable="true"
+                app:normalUrl="@{data.icon}"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/person_image_empty"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="#3ddd"
+                fresco:roundingBorderWidth="1dp" />
+
+            <TextView
+                android:id="@+id/shot_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/user_image"
+                android:layout_alignTop="@id/user_image"
+                android:layout_toRightOf="@id/user_image"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:paddingLeft="@dimen/spacing_micro"
+                android:text="@{data.name}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/shot_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_image"
+                android:layout_marginBottom="@dimen/spacing_micro"
+                app:normalUrl="@{data.creatives}"
+                fresco:viewAspectRatio="2.048" />
+
+            <TextView
+                android:id="@+id/shot_gif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/shot_image"
+                android:layout_alignTop="@id/shot_image"
+                android:layout_marginRight="@dimen/spacing_text"
+                android:layout_marginTop="@dimen/spacing_text"
+                android:background="@drawable/gif_indicator_bg"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="Ad"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/shot_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shot_image"
+                android:background="@color/ad_description_bg_inverse"
+                android:ellipsize="end"
+                android:maxLines="6"
+                android:paddingLeft="@dimen/spacing_normal"
+                android:paddingRight="@dimen/spacing_normal"
+                android:paddingBottom="@dimen/spacing_normal"
+                android:paddingTop="4dp"
+                android:text="@{data.des}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/black"
+                android:visibility="visible" />
+
+            <!-- action layout-->
+            <RatingBar
+                android:id="@+id/shot_views"
+                style="@android:style/Widget.DeviceDefault.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/shot_description"
+                android:layout_marginLeft="@dimen/spacing_text"
+                android:layout_marginRight="@dimen/spacing_text"
+                android:gravity="center"
+                android:numStars="5"
+                android:rating="@{(float)data.rating}" />
+
+            <TextView
+                android:id="@+id/shot_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/shot_views"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/spacing_text"
+                android:layout_marginRight="@dimen/spacing_text"
+                android:gravity="center"
+                android:minWidth="52dp"
+                android:paddingLeft="@dimen/spacing_text"
+                android:paddingRight="@dimen/spacing_text"
+                android:text="@{data.btn}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+            <TextView
+                android:id="@+id/shot_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/shot_views"
+                android:layout_marginLeft="@dimen/spacing_text"
+                android:layout_marginRight="@dimen/spacing_text"
+                android:layout_toStartOf="@id/shot_comment"
+                android:gravity="center"
+                android:minWidth="52dp"
+                android:paddingLeft="@dimen/spacing_text"
+                android:paddingRight="@dimen/spacing_text"
+                android:text="@{data.size}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</layout>

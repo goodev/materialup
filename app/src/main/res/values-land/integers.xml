@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 48 + 48 -->
+    <dimen name="toolbar_placeholder_height">96dp</dimen>
+</resources>

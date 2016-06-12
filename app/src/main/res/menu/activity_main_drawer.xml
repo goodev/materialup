@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:checked="true"
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_inspiration"
+            android:icon="@drawable/ic_flare_black"
+            android:title="@string/nav_inspiration" />
+        <item
+            android:id="@+id/nav_resources"
+            android:icon="@drawable/ic_build_black"
+            android:title="@string/nav_resources" />
+        <item
+            android:id="@+id/nav_freebies"
+            android:icon="@drawable/ic_card_giftcard_black"
+            android:title="@string/nav_freebies" />
+        <item
+            android:id="@+id/nav_market"
+            android:icon="@drawable/ic_store_black"
+            android:title="@string/nav_market" />
+        <item
+            android:id="@+id/nav_collections"
+            android:icon="@drawable/ic_collections_black"
+            android:title="@string/nav_collections" />
+    </group>
+
+    <item android:title="@string/nav_other_title">
+        <menu>
+            <item
+                android:id="@+id/nav_app"
+                android:icon="@drawable/ic_app"
+                android:title="@string/title_activity_ads" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/nav_share" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_menu_feedback"
+                android:title="@string/nav_feedback" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_about"
+                android:title="@string/nav_about" />
+        </menu>
+    </item>
+
+</menu>

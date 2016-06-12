@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="org.goodev.material.App" />
+
+        <variable
+            name="post"
+            type="org.goodev.material.model.Collection" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        style="?cardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_micro"
+        android:foreground="?selectableItemBackground"
+        app:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:id="@+id/shot_item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutMode="opticalBounds">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/userImage"
+                android:layout_width="@dimen/avatar_size"
+                android:layout_height="@dimen/avatar_size"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:layout_marginEnd="@dimen/spacing_normal"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:clickable="true"
+                android:focusable="true"
+                app:normalUrl="@{post.userAvatar}"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/person_image_empty"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="#3ddd"
+                fresco:roundingBorderWidth="1dp" />
+
+            <TextView
+                android:id="@+id/updater"
+                android:layout_toEndOf="@id/userImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/spacing_micro"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@{post.name}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/userImage"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@id/updater"
+                android:layout_marginTop="@dimen/spacing_micro"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:paddingEnd="40dp"
+                android:text="@{post.countText}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userImage"
+                app:normalUrl="@{post.teaserUrl}"
+                fresco:viewAspectRatio="1.33" />
+
+            <ImageView
+                android:id="@+id/source"
+                style="@style/IconButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                app:srcCompat="@drawable/dribbble"
+                android:padding="@dimen/spacing_normal"
+                android:theme="@style/SourceButton"
+                android:tint="@color/source_icon_color"
+                android:visibility="@{App.isLogin() ? View.VISIBLE : View.GONE}" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</layout>

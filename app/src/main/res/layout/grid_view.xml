@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:columnWidth="@dimen/avatar_bounds"
+    android:verticalSpacing="@dimen/spacing_micro"
+    android:horizontalSpacing="@dimen/spacing_micro"
+    android:stretchMode="spacingWidthUniform"
+    android:numColumns="auto_fit"
+    android:padding="@dimen/spacing_normal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</GridView>

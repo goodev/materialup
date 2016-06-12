@@ -1,0 +1,191 @@
+<resources>
+    <string name="app_name">MaterialUp</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="popular">Popular</string>
+    <string name="latest">Latest</string>
+    <string name="updater">by %s</string>
+    <string name="check_network">Check your device network.</string>
+    <string name="general_error">Error, please try later !</string>
+
+
+    <!-- global -->
+    <string name="no_comments">no comments</string>
+    <string name="login_to">Log in to</string>
+    <string name="need_login">Woah there chief. First you\'ll need&#160;to</string>
+    <!-- &#160; == nbsp -->
+    <string name="dribbble_logged_in_as">Logged in as</string>
+    <string name="comment">Comment</string>
+    <string name="hint_reply">Reply</string>
+
+    <!-- main screen -->
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
+    <string name="about">About</string>
+    <string name="dribbble_login">Log in to Dribbble</string>
+    <string name="dribbble_log_out">Log out of Dribbble</string>
+    <string name="dribbble_logged_out">Logged out of Dribbble</string>
+    <string name="designer_news_login">Log in to Designer News</string>
+    <string name="designer_news_log_out">Log out of Designer News</string>
+    <string name="designer_news_logged_out">Logged out of Designer News</string>
+    <string name="add">Add</string>
+    <string name="edit">Edit</string>
+    <string name="no_filters_selected">No filters selected, press the filter button above (&#2228;)\nor swipe from the&#160;right</string>
+
+    <!-- data sources / filters -->
+    <string name="source_designer_news_popular">Popular Designer News</string>
+    <string name="source_designer_news_recent">Recent Designer News</string>
+    <string name="source_dribbble_popular">Popular Dribbbles</string>
+    <string name="source_dribbble_following">Dribbble following</string>
+    <string name="source_dribbble_user_likes">My Dribbble likes</string>
+    <string name="source_dribbble_user_shots">My Dribbble shots</string>
+    <string name="source_dribbble_recent">Recent Dribbbles</string>
+    <string name="source_dribbble_debuts">Dribbble Debuts</string>
+    <string name="source_dribbble_animated">Dribbble Animated</string>
+    <string name="source_dribbble_search_material_design">Material Design</string>
+    <string name="source_product_hunt">Product Hunt</string>
+
+    <!-- Search -->
+    <string name="search_hint">Search MaterialUp</string>
+    <string name="no_search_results">No results for\n“%1$s”</string>
+    <string name="confirm_save_dribbble_search">Save Dribbble</string>
+    <string name="confirm_save_designer_news_search">Save Designer News</string>
+    <string name="confirm_save_search">Save</string>
+
+    <!-- new designer news story -->
+    <string name="new_story_title">Post a story to Designer News</string>
+    <string name="new_story_instructions">Submit a link or provide a comment to start a discussion.</string>
+    <string name="new_story_link_or_comment">Include a url <b>or</b> a comment</string>
+    <string name="new_story_post_title">Post title</string>
+    <string name="new_story_url">Url</string>
+    <string name="new_story_url_hint">Link</string>
+    <string name="new_story_post">Post</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- designer news login -->
+    <string name="username">Username</string>
+    <string name="get_accounts_permission_primer_message">Autocomplete email addresses</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="dn_login_action">Log in</string>
+
+    <!-- designer news story -->
+    <string name="upvote_story">Upvote story</string>
+    <!-- using strings for the number of views/likes as we run them through NumberFormat -->
+    <plurals name="upvotes">
+        <item quantity="zero">no upvotes</item>
+        <item quantity="one">%s upvote</item>
+        <item quantity="other">%s upvotes</item>
+    </plurals>
+
+
+    <!-- dribbble shot screen -->
+    <!-- using strings for the number of views/likes as we run them through NumberFormat -->
+    <plurals name="likes">
+        <item quantity="zero">no likes</item>
+        <item quantity="one">%s like</item>
+        <item quantity="other">%s likes</item>
+    </plurals>
+    <plurals name="views">
+        <item quantity="zero">no views</item>
+        <item quantity="one">%s view</item>
+        <item quantity="other">%s views</item>
+    </plurals>
+    <string name="share">share</string>
+    <string name="save">save</string>
+    <string name="prospects_cant_post">Sorry but prospects cannot comment :(</string>
+
+    <!-- dribbble login -->
+
+    <!-- about screen -->
+    <string name="about_0">MaterialUp is an unofficial MaterialUp App. MaterialUp pulls data from [MaterialUp](http://www.materialup.com/), it is in no way an official client for MaterialUp nor endorsed by MaterialUp. </string>
+    <string name="about_1">MaterialUp(%s) is written by Goodev</string>
+    <string name="about_2">[Github](https://github.com/goodev) | [Website](http://blog.chengyunfeng.com/)</string>
+    <string name="about_3">This is the beta version, still subject to bugs or crashes, if it has problems with your devices, please don\'t give it a one star; if you have any suggestions, please write down your [Feedback as a review](https://play.google.com/store/apps/details?id=org.goodev.material) and rate a five stars. Thank you for your support!</string>
+    <string name="about_icon_0">"MaterialUp\'s icon is lovingly crafted by the inimitable Jovie&#160;Brett"</string>
+    <string name="about_icon_1">[Twitter](https://twitter.com/brettbrdls) | [Dribbble](https://dribbble.com/brettbrdls)</string>
+    <string name="about_libs_intro">MaterialUp is built with the help of these awesome&#160;Apps&amp;libraries </string>
+    <string name="about_lib_link">website</string>
+    <string name="title_activity_login">Login to MaterialUp</string>
+    <string name="title_activity_user">UserActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="can_not_display_this_user">Can not display this user right now</string>
+    <string name="can_not_display_this">Can not display this right now</string>
+    <string name="loading">loading …</string>
+    <string name="upvoted">upvoted (%s)</string>
+    <string name="created">created (%s)</string>
+    <string name="showcased">showcased (%s)</string>
+    <string name="collections">collections (%s)</string>
+    <string name="followers">followers (%s)</string>
+    <string name="following">following (%s)</string>
+    <string name="title_activity_collections">CollectionsActivity</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_inspiration">Inspiration</string>
+    <string name="nav_resources">Resources</string>
+    <string name="nav_freebies">Freebies</string>
+    <string name="nav_market">Market</string>
+    <string name="nav_collections">Collections</string>
+    <string name="animations">Animations</string>
+    <string name="apps">Apps</string>
+    <string name="icons">Icons</string>
+    <string name="illustrations">Illustrations</string>
+    <string name="ui">User Interfaces</string>
+    <string name="landing">Landing pages</string>
+    <string name="website">Websites</string>
+    <string name="kit">UI Kits</string>
+    <string name="theme">Themes</string>
+    <string name="mockup">Mockups</string>
+    <string name="template">Templates</string>
+    <string name="featured">Featured</string>
+    <string name="my_collections">My Collections</string>
+    <string name="following_collections">Following</string>
+    <string name="extension">Extensions</string>
+    <string name="framework">Frameworks</string>
+    <string name="generator">Generators</string>
+    <string name="libraries">Libraries</string>
+    <string name="software">Softwares</string>
+    <string name="article">Articles</string>
+    <string name="guide">Guides</string>
+    <string name="snippet">Snippets</string>
+    <string name="tutorial">Tutorials</string>
+    <string name="nav_other_title">Other</string>
+    <string name="nav_share">Share</string>
+    <string name="nav_about">About</string>
+    <string name="empty">Error or empty!</string>
+    <string name="source_url_not_exist">The source url not exist!</string>
+    <string name="upvoters">Upvoters</string>
+    <string name="title_activity_select_collection">Select a collection</string>
+    <string name="add_post_to_collection_success">Successfully added to collection!</string>
+    <string name="action_follow">FOLLOW</string>
+    <string name="action_following">FOLLOWING</string>
+    <string name="app_intro">Material Design, Daily</string>
+    <string name="share_text">View MaterialUp.com post on your phone with MaterialUp APP. https://play.google.com/store/apps/details?id=org.goodev.material </string>
+    <string name="share_subject">View material designs on your phone</string>
+    <string name="image_is_loading">Image is downloading, click this again after downloaded.</string>
+    <string name="image_saved_to">Image save to %s</string>
+    <string name="login_tips">Login to get more features</string>
+    <string name="login">LOGIN</string>
+    <string name="already_login">You are already loged in .</string>
+    <string name="nav_feedback">Feedback</string>
+
+    <string name="rate_text"><b>You are happy, we are happy!</b></string>
+    <string name="rate_subtext">Please share this rating of our app on the Google Store! Thanks for your support!</string>
+    <string name="rate">Rate now</string>
+    <string name="remind">Next time</string>
+    <string name="no">No thanks</string>
+    <string name="dontask">Never ask</string>
+    <string name="notices">Notices</string>
+    <string name="first_use_message">This is the beta version, still subject to bugs or crashes, if it has problems with your devices, please don\'t give it a one star; if you have any suggestions, please write down your feedback as a review and rate a five stars. Thank you for your support!</string>
+    <string name="storage_permission_info">Need storage permission to save this photo.</string>
+    <string name="login_info">This screen will automatically closed</string>
+    <string name="no_more_posts">No more posts</string>
+    <string name="osapps">Open-Source Apps</string>
+    <string name="notification">Notifications</string>
+    <string name="title_activity_ads">More Apps</string>
+    <string name="empty_apps">Can not get apps right now!</string>
+    <string name="title_activity_create">Share to MaterialUp</string>
+    <string name="url_hit">URL ex.\"http://abc.com\"</string>
+</resources>

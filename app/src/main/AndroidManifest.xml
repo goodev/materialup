@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:installLocation="auto"
+    package="org.goodev.material">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- Below is optional -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Activity for register SDK -->
+        <activity android:name="com.adxmi.customizedad.flow.activity.StoreActivity" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/LaunchTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PostActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Plaid.Translucent.DribbbleShot">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".PhotoActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Plaid.Translucent.Photo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity
+            android:name=".UserActivity"
+            android:label=""
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label=""
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Plaid.Translucent.About">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".CollectionsActivity"
+            android:label="@string/title_activity_collections"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoTitle">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.goodev.material.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SelectCollectionActivity"
+            android:label="@string/title_activity_select_collection"
+            android:theme="@style/AppTheme.NoTitle" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="@string/share_authority"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fresco_disk_cache_path" />
+        </provider>
+
+        <activity
+            android:name=".SearchActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Plaid.Translucent.Search">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="org.goodev.ui.AdsActivity"
+            android:label="@string/title_activity_ads"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity
+            android:name=".CreateActivity"
+            android:label="@string/title_activity_create"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.goodev.material.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

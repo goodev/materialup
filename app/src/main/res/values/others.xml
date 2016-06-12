@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- content authorities -->
+    <string name="share_authority" translatable="false">org.goodev.material.fileprovider</string>
+</resources>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="post"
+            type="org.goodev.material.model.Post" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        style="?cardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_micro"
+        android:foreground="?selectableItemBackground"
+        app:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:id="@+id/shot_item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutMode="opticalBounds">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/userImage"
+                android:layout_width="@dimen/avatar_size"
+                android:layout_height="@dimen/avatar_size"
+                android:transitionName="@string/transition_user"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/spacing_normal"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="@{post.hasName() ? View.VISIBLE : View.GONE}"
+                app:normalUrl="@{post.avatarUrl}"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/person_image_empty"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="#3ddd"
+                fresco:roundingBorderWidth="1dp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_marginEnd="@dimen/spacing_normal"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/userImage"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@{post.price}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/price_color"
+                android:visibility="@{post.price != null ? View.VISIBLE : View.GONE}" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_toEndOf="@id/userImage"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:layout_marginBottom="@dimen/spacing_text"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:ellipsize="none"
+                android:paddingEnd="40dp"
+                android:text="@{post.title}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+            <TextView
+                android:id="@+id/updater"
+                android:layout_toEndOf="@id/userImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_toStartOf="@id/price"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="@{post.userName}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textStyle="bold"
+                android:visibility="@{post.hasName() ? View.VISIBLE : View.GONE}" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userImage"
+                app:background="@{post.background}"
+                app:normalUrl="@{post.imageUrl}"
+                app:teaserUrl="@{post.teaserUrl}"
+                fresco:viewAspectRatio="1.33" />
+
+            <ImageView
+                android:id="@+id/source"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:imageResource="@{post.getSourceIcon()}"
+                android:padding="@dimen/source_icon_spacing"
+                android:theme="@style/SourceButton"
+                android:tint="@color/source_icon_color"
+                android:visibility="@{post.hasSource() ? View.VISIBLE : View.GONE}" />
+
+            <org.goodev.widget.SquareTextView
+                android:id="@+id/votes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/imageView"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/spacing_normal"
+                android:background="@drawable/bg_circle"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:padding="@dimen/spacing_normal"
+                android:singleLine="true"
+                android:text="@{String.valueOf(post.votes)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:visibility="@{post.votes > 0 ? View.VISIBLE : View.GONE}" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</layout>

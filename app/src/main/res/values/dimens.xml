@@ -1,0 +1,77 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines.
+    <dimen name="keyline_1">16dp</dimen>
+    <dimen name="keyline_1_minus_12dp">4dp</dimen>
+    <dimen name="keyline_1_minus_8dp">8dp</dimen>-->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- standard metrics -->
+    <dimen name="spacing_text">4dp</dimen>
+    <dimen name="spacing_micro">4dp</dimen>
+    <dimen name="spacing_normal">8dp</dimen>
+    <dimen name="source_icon_spacing">8dp</dimen>
+    <dimen name="ab_source_icon_spacing">16dp</dimen>
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="spacing_large">32dp</dimen>
+    <dimen name="spacing_xlarge">48dp</dimen>
+    <dimen name="spacing_huge">64dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="keyline_11">72dp</dimen>
+    <dimen name="des_btn_margin_top">0dp</dimen>
+    <dimen name="des_btn_padding_top">32dp</dimen>
+    <dimen name="display_4_text_size">112sp</dimen>
+    <dimen name="divider_height">1px</dimen>
+    <dimen name="dialog_corners">2dp</dimen>
+    <dimen name="padding_room_for_fab">88dp</dimen>
+    <!-- padding_normal + fab_size + padding_normal -->
+    <dimen name="fab_plus_single_padding">72dp</dimen>
+    <!-- fab_size + padding_normal -->
+    <dimen name="half_fab_plus_single_padding">44dp</dimen>
+    <!-- (fab_size / 2) + padding_normal -->
+
+    <!-- dribbble shot -->
+    <dimen name="shot_collapsed_app_bar_height">168dp</dimen>
+    <!-- 3 * ?android:actionBarSize -->
+    <dimen name="drag_dismiss_distance">112dp</dimen>
+    <!-- 2 * ?android:actionBarSize -->
+
+    <!-- avatar should be a 40dp asset in a 48dp touch target & optically aligned with standard padding -->
+    <dimen name="avatar_size">40dp</dimen>
+    <dimen name="user_avatar_size">80dp</dimen>
+    <dimen name="avatar_bounds">48dp</dimen>
+    <dimen name="upvoter_avatar_bounds">56dp</dimen>
+    <dimen name="social_button_size">52dp</dimen>
+    <dimen name="social_button_padding">14dp</dimen>
+    <dimen name="avatar_padding">4dp</dimen>
+    <!-- (avatar_bounds - avatar_size) / 2 -->
+    <dimen name="avatar_margin">12dp</dimen>
+    <!-- padding_normal - avatar_padding -->
+    <dimen name="comment_actions_height">40dp</dimen>
+    <dimen name="comment_like_margin_adjustment">-8dp</dimen>
+
+    <!-- Z-axis elevations -->
+    <dimen name="z_app_bar">4dp</dimen>
+    <dimen name="z_card">2dp</dimen>
+    <dimen name="z_fab">6dp</dimen>
+    <dimen name="touch_raise">6dp</dimen>
+    <dimen name="touched_app_bar">8dp</dimen>
+    <dimen name="z_fab_over_touchable_app_bar">9dp</dimen>
+    <dimen name="z_drawer">16dp</dimen>
+    <dimen name="z_dialog">24dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="user_avatar_margin_top">48dp</dimen>
+
+    <!-- about screen -->
+    <dimen name="about_header_height">224dp</dimen>
+    <dimen name="about_drag_dismiss_distance">112dp</dimen>
+    <!-- 2 * ?android:actionBarSize -->
+    <dimen name="about_icon_padding">24dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+</resources>

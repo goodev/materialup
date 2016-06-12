@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sortEntries">
+        <item>Latest</item>
+        <item>Popular</item>
+    </string-array>
+    <string-array name="siteEntries">
+        <item>Materialup</item>
+        <item>Siteup</item>
+        <item>iOSup</item>
+    </string-array>
+</resources>

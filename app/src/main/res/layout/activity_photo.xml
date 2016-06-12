@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.goodev.material.widget.ElasticDragDismissFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/draggable_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:dragDismissDistance="@dimen/drag_dismiss_distance"
+    app:dragDismissScale="0.95"
+    android:fitsSystemWindows="true"
+    tools:context="org.goodev.material.PostActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_light"
+        android:fitsSystemWindows="true"
+        android:transitionName="@string/transition_shot_background"
+        android:transitionGroup="false">
+
+        <org.goodev.material.widget.zoomable.ZoomableDraweeView
+            android:id="@+id/shot"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:transitionName="@string/transition_shot"
+            fresco:actualImageScaleType="fitCenter" />
+
+        <!-- We're 'faking' a toolbar here as we just want a back button.
+             This approach lets the borderless ripple extend beyond the back button's bounds,
+             toolbar clips it. Wrapping layout needed for the ripple. -->
+        <FrameLayout
+            android:layout_gravity="top|start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:elevation="@dimen/z_fab_over_touchable_app_bar">
+
+            <!-- animate alpha in DribbleShot#enterAnimation
+                 margins push out parent for the borderless ripple -->
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="?android:actionBarSize"
+                android:layout_height="?android:actionBarSize"
+                android:layout_marginEnd="@dimen/padding_normal"
+                android:layout_marginBottom="@dimen/padding_normal"
+                app:srcCompat="@drawable/ic_arrow_back"
+                android:tint="@color/background_dark"
+                android:alpha="0"
+                android:background="?selectableItemBackgroundBorderless" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_gravity="top|end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:elevation="@dimen/z_fab_over_touchable_app_bar">
+
+            <!-- animate alpha in DribbleShot#enterAnimation
+                 margins push out parent for the borderless ripple -->
+            <ImageButton
+                android:id="@+id/save"
+                android:layout_width="?android:actionBarSize"
+                android:layout_height="?android:actionBarSize"
+                android:layout_marginStart="@dimen/padding_normal"
+                android:padding="@dimen/ab_source_icon_spacing"
+                android:layout_marginBottom="@dimen/padding_normal"
+                app:srcCompat="@drawable/ic_save_black"
+                android:tint="@color/background_dark"
+                android:scaleType="fitCenter"
+                android:alpha="0"
+                android:background="?selectableItemBackgroundBorderless" />
+
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+</org.goodev.material.widget.ElasticDragDismissFrameLayout>

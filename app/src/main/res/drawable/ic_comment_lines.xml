@@ -1,0 +1,55 @@
+<!--
+  Copyright 2015 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <path
+        android:name="comment_bubble"
+        android:pathData="M2,5 C2,3.9 2.9,3 4,3 L20,3 C21.1,3 22,3.9 22,5 L22,17 C22,18.1 21.1,19 20,19 L2,19 L2,5 Z M2,23 L6,19 L2,19 L2,23 Z"
+        android:fillColor="@color/comment_bubble" />
+
+    <group
+        android:name="@string/comment_line_add_group"
+        android:pivotX="12"
+        android:pivotY="11">
+
+        <path
+            android:name="@string/comment_line_1"
+            android:pathData="M7,8 L17,8"
+            android:strokeWidth="2"
+            android:strokeLineCap="square"
+            android:strokeColor="@color/comment_line_stroke_color" />
+
+        <path
+            android:name="@string/comment_line_2"
+            android:pathData="M7,11 L17,11"
+            android:strokeWidth="2"
+            android:strokeLineCap="square"
+            android:strokeColor="@color/comment_line_stroke_color" />
+
+        <path
+            android:name="@string/comment_line_3"
+            android:pathData="M7,14 L17,14"
+            android:strokeWidth="2"
+            android:strokeLineCap="square"
+            android:strokeColor="@color/comment_line_stroke_color" />
+
+    </group>
+
+</vector>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BezelImageView">
+        <attr name="maskDrawable" format="reference" />
+        <attr name="borderDrawable" format="reference" />
+        <attr name="desaturateOnPress" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ProgressView">
+        <attr name="progressColor" format="color|reference" />
+    </declare-styleable>
+
+    <attr name="cardViewStyle" format="reference" />
+    <attr name="fabBackground" format="color|reference" />
+    <attr name="toolbarTheme" format="reference" />
+    <attr name="filterBackgroundColor" format="color|reference" />
+    <attr name="navdrawerBackground" format="color|reference" />
+    <attr name="navdrawerTextColor" format="color|reference" />
+    <attr name="navdrawerIconTint" format="color|reference" />
+    <attr name="navdrawerTintColor" format="color|reference" />
+</resources>

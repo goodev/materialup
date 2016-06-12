@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SpinnerPopup" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textAppearance">@style/TextAppearance.ToolbarTitle</item>
+    </style>
+</resources>

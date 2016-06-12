@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- transition shared elements -->
+    <string name="transition_shot" translatable="false">shot</string>
+    <string name="transition_user" translatable="false">user</string>
+    <string name="transition_user_avatar" translatable="false">user_avatar</string>
+    <string name="transition_shot_title" translatable="false">shot_title</string>
+    <string name="transition_shot_background" translatable="false">shot_background</string>
+    <string name="transition_story_title" translatable="false">story_title</string>
+    <string name="transition_story_title_background" translatable="false">story_title_background</string>
+    <string name="transition_story_background" translatable="false">transition_story_background</string>
+    <string name="transition_dribbble_login" translatable="false">dribbble_login</string>
+    <string name="transition_designer_news_login" translatable="false">transition_designer_news_login</string>
+    <string name="transition_new_designer_news_post" translatable="false">new_designer_news_post</string>
+</resources>

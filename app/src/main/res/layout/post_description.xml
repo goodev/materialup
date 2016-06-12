@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alignmentMode="alignBounds"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    android:background="@android:color/transparent">
+    <!-- transparent background needed for the ripple on the spacer -->
+
+    <!-- spacer for the image -->
+    <org.goodev.material.widget.FourThreeView
+        android:id="@+id/shot_spacer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?selectableItemBackground" />
+
+    <include layout="@layout/dribbble_shot_title" />
+
+    <LinearLayout
+        android:id="@+id/shot_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/padding_normal"
+        android:paddingEnd="@dimen/padding_normal">
+
+        <Space
+            android:layout_weight="0.3"
+            android:layout_width="0dp"
+            android:layout_height="1dp" />
+        <Button
+            android:id="@+id/shot_view_count"
+            android:paddingTop="@dimen/des_btn_padding_top"
+            android:layout_marginTop="@dimen/des_btn_margin_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_add_wrap"
+            android:text="@string/save"
+            tools:text="33 views"
+            style="@style/Widget.Plaid.InlineActionButton" />
+
+        <Space
+            android:layout_weight="0.3"
+            android:layout_width="0dp"
+            android:layout_height="1dp" />
+        <Button
+            android:id="@+id/shot_share_action"
+            android:paddingTop="@dimen/des_btn_padding_top"
+            android:layout_marginTop="@dimen/des_btn_margin_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_normal"
+            android:drawableTop="@drawable/ic_action_share_wrap"
+            android:text="@string/share"
+            style="@style/Widget.Plaid.InlineActionButton" />
+
+        <Space
+            android:layout_weight="0.3"
+            android:layout_width="0dp"
+            android:layout_height="1dp" />
+        <Button
+            android:id="@+id/shot_like_count"
+            android:paddingTop="@dimen/des_btn_padding_top"
+            android:layout_marginTop="@dimen/des_btn_margin_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_upvote_filled_wrap"
+            tools:text="33 votes"
+            style="@style/Widget.Plaid.InlineActionButton" />
+
+        <Space
+            android:layout_weight="0.3"
+            android:layout_width="0dp"
+            android:layout_height="1dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:animateLayoutChanges="true"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/player_avatar"
+            android:layout_width="@dimen/avatar_bounds"
+            android:layout_height="@dimen/avatar_bounds"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="@dimen/avatar_margin"
+            android:layout_marginEnd="@dimen/avatar_margin"
+            android:padding="@dimen/avatar_padding"
+            android:textColorLink="@color/dribbble_links"
+            android:textColorHighlight="@color/dribbble"
+            android:stateListAnimator="@animator/raise"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:focusable="true"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@drawable/avatar_placeholder"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="#3ddd"
+            fresco:roundingBorderWidth="1dp" />
+
+        <TextView
+            android:id="@+id/shot_time_ago"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:layout_toStartOf="@id/player_avatar"
+            android:layout_alignTop="@id/player_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_micro"
+            android:textAppearance="@style/TextAppearance.CommentTimestamp"
+            tools:text="3 hours ago" />
+
+        <TextView
+            android:id="@+id/player_name"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_toStartOf="@id/player_avatar"
+            android:layout_below="@id/shot_time_ago"
+            android:layout_marginTop="@dimen/spacing_micro"
+            android:textAppearance="@style/TextAppearance.CommentAuthor"
+            android:clickable="false"
+            tools:text="—Nick B" />
+
+    </RelativeLayout>
+
+    <!--
+    <io.plaidapp.ui.widget.CircularImageView
+        android:id="@+id/player_avatar"
+        android:layout_width="@dimen/avatar_bounds"
+        android:layout_height="@dimen/avatar_bounds"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="@dimen/avatar_margin"
+        android:layout_rowSpan="2"
+        android:padding="@dimen/avatar_padding"
+        android:textColorLink="@color/dribbble_links"
+        android:textColorHighlight="@color/dribbble"
+        android:stateListAnimator="@animator/raise"
+        android:src="@drawable/avatar_placeholder"
+        android:foreground="?selectableItemBackground" / -->
+
+    <!-- can't use a marginEnd on the above image view as it pushes in the whole column so instead
+         add another column to contain the below space element -->
+
+
+</LinearLayout>
